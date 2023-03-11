@@ -8,17 +8,17 @@ namespace Main.Scripts.ApplicationCore.Clients
 {
     public class MainClient : ClientBase
     {
-           #region Params
+        #region Params
 
         //Controllers
-        [Header("Controllers")]
-        [SerializeField] private VrPlayerController vrPlayerController;
+        [Header("Controllers")] [SerializeField]
+        private VrPlayerController vrPlayerController;
 
         [SerializeField] private SceneLoaderController sceneLoaderController;
-        
-        
+        [SerializeField] private LoginController loginController;
+
+
         //Services
-     
 
         #endregion
 
@@ -28,13 +28,13 @@ namespace Main.Scripts.ApplicationCore.Clients
 
         protected override void InitializeServices()
         {
-           
         }
 
         protected override void InitializeControllers()
         {
             Controllers.Add(vrPlayerController);
             Controllers.Add(sceneLoaderController);
+            Controllers.Add(loginController);
         }
 
         protected override void StartScenario()
@@ -81,7 +81,7 @@ namespace Main.Scripts.ApplicationCore.Clients
             else
                 sceneLoaderController.Init(scene);
         }
-        
+
         private void SceneIsLoaded(string room)
         {
             if (string.IsNullOrEmpty(room)) return;
@@ -97,13 +97,13 @@ namespace Main.Scripts.ApplicationCore.Clients
         private (Transform leftHandRoot, Transform rightHandRoot) _handRoots;
         private List<Transform> _vrikPoints;
         private Action _onFirstSceneLoad;
-        
+
         private void InitializeVrPlayerController()
         {
             vrPlayerController.Ready += VrPlayerControllerReady;
             vrPlayerController.Init();
         }
-        
+
         private void VrPlayerControllerReady(Transform playerRoot,
             (Transform leftHandRoot, Transform rightHandRoot) handRoots, List<Transform> vrikPoints)
         {
@@ -114,10 +114,10 @@ namespace Main.Scripts.ApplicationCore.Clients
             _onFirstSceneLoad += InitializeLoginController;
             LoadNewScene(scenes[0], _onFirstSceneLoad);
         }
-        
+
         private void InitializeLoginController()
         {
-           
+            loginController.Init();
         }
     }
 }

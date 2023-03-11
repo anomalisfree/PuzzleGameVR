@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 2044775115}
   - component: {fileID: 2044775114}
   - component: {fileID: 2044775113}
+  - component: {fileID: 2044775116}
   m_Layer: 0
   m_Name: CLIENT
   m_TagString: Untagged
@@ -251,3 +252,18 @@ MonoBehaviour:
   - MainScene
   vrPlayerController: {fileID: 2044775114}
   sceneLoaderController: {fileID: 2044775113}
+  loginController: {fileID: 2044775116}
+--- !u!114 &2044775116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044775111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6e8bb1575171d41b4e72d9858dc601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loginView: {fileID: 4239627582756446517, guid: 30a3cbd76338b97429b872c1f112951f,
+    type: 3}
