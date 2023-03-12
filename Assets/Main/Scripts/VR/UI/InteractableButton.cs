@@ -1,3 +1,5 @@
+using Main.Scripts.ApplicationCore.Clients;
+using Main.Scripts.ApplicationCore.Controllers;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -55,6 +57,8 @@ namespace Main.Scripts.VR.UI
 
         protected override void UIClick()
         {
+            ClientBase.Instance.GetController<AudioFXController>().AddAudioFX(transform, AudioFXType.Click);
+            
             _isOn = !_isOn;
             
             if (_isOn)

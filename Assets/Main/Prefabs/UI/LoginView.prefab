@@ -24025,6 +24025,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c8fcaad555b0b741818ac22e5d15e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameZone: {fileID: 5940664901746113279}
+  roomZone: {fileID: 7238345240058893297}
+  inputFieldName: {fileID: 5940664901784593283}
+  loginButton: {fileID: 9025383016238830973}
+  inputFieldRoom: {fileID: 5532803046935742248}
+  connectButton: {fileID: 1610966760805732102}
 --- !u!1 &7782049324901252012
 GameObject:
   m_ObjectHideFlags: 0

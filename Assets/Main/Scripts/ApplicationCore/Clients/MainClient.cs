@@ -15,6 +15,7 @@ namespace Main.Scripts.ApplicationCore.Clients
         private VrPlayerController vrPlayerController;
 
         [SerializeField] private SceneLoaderController sceneLoaderController;
+        [SerializeField] private AudioFXController audioFXController;
         [SerializeField] private LoginController loginController;
 
 
@@ -34,6 +35,7 @@ namespace Main.Scripts.ApplicationCore.Clients
         {
             Controllers.Add(vrPlayerController);
             Controllers.Add(sceneLoaderController);
+            Controllers.Add(audioFXController);
             Controllers.Add(loginController);
         }
 
@@ -96,6 +98,8 @@ namespace Main.Scripts.ApplicationCore.Clients
         private Transform _playerRoot;
         private (Transform leftHandRoot, Transform rightHandRoot) _handRoots;
         private List<Transform> _vrikPoints;
+        private string _playerName;
+        private string _room;
         private Action _onFirstSceneLoad;
 
         private void InitializeVrPlayerController()
@@ -117,7 +121,16 @@ namespace Main.Scripts.ApplicationCore.Clients
 
         private void InitializeLoginController()
         {
+            loginController.IsLogin += OnLogin;
             loginController.Init();
+        }
+        
+        private void OnLogin(string playerName, string room)
+        {
+            loginController.IsLogin -= OnLogin;
+            _playerName = playerName;
+            _room = room;
+            LoadNewScene(scenes[1], room);
         }
     }
 }

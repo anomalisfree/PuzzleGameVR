@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 2044775115}
   - component: {fileID: 2044775114}
   - component: {fileID: 2044775113}
+  - component: {fileID: 2044775117}
   - component: {fileID: 2044775116}
   m_Layer: 0
   m_Name: CLIENT
@@ -252,6 +253,7 @@ MonoBehaviour:
   - MainScene
   vrPlayerController: {fileID: 2044775114}
   sceneLoaderController: {fileID: 2044775113}
+  audioFXController: {fileID: 2044775117}
   loginController: {fileID: 2044775116}
 --- !u!114 &2044775116
 MonoBehaviour:
@@ -267,3 +269,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loginView: {fileID: 4239627582756446517, guid: 30a3cbd76338b97429b872c1f112951f,
     type: 3}
+--- !u!114 &2044775117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044775111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f91aa89d2950914f8003b07524b7afa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioFXView: {fileID: 6260437146686180451, guid: 6ad6cc3f80f5e3046849ce223ddbdc05,
+    type: 3}
+  clickSounds:
+  - {fileID: 8300000, guid: 311ec0e3ddc71474eb5f91f03161f401, type: 3}
+  - {fileID: 8300000, guid: 438aa3c1164a6b04c86363d56d293891, type: 3}
+  finalClickSounds:
+  - {fileID: 8300000, guid: e561c9f0cfea72e4db68ca897eb8bf2c, type: 3}
