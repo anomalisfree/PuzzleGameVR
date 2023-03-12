@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 2044775113}
   - component: {fileID: 2044775117}
   - component: {fileID: 2044775116}
+  - component: {fileID: 2044775118}
   m_Layer: 0
   m_Name: CLIENT
   m_TagString: Untagged
@@ -255,6 +256,7 @@ MonoBehaviour:
   sceneLoaderController: {fileID: 2044775113}
   audioFXController: {fileID: 2044775117}
   loginController: {fileID: 2044775116}
+  realtimeMultiplayerController: {fileID: 2044775118}
 --- !u!114 &2044775116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,3 +290,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 438aa3c1164a6b04c86363d56d293891, type: 3}
   finalClickSounds:
   - {fileID: 8300000, guid: e561c9f0cfea72e4db68ca897eb8bf2c, type: 3}
+--- !u!114 &2044775118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044775111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95862bc893c06764bbd4c2c93b3cb581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  realtimeMultiplayerView: {fileID: 2546483657323038189, guid: 073969913cf6e4048b3152be808a89c7,
+    type: 3}

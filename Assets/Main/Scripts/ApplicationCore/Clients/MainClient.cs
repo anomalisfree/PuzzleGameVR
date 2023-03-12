@@ -17,6 +17,7 @@ namespace Main.Scripts.ApplicationCore.Clients
         [SerializeField] private SceneLoaderController sceneLoaderController;
         [SerializeField] private AudioFXController audioFXController;
         [SerializeField] private LoginController loginController;
+        [SerializeField] private RealtimeMultiplayerController realtimeMultiplayerController;
 
 
         //Services
@@ -37,6 +38,7 @@ namespace Main.Scripts.ApplicationCore.Clients
             Controllers.Add(sceneLoaderController);
             Controllers.Add(audioFXController);
             Controllers.Add(loginController);
+            Controllers.Add(realtimeMultiplayerController);
         }
 
         protected override void StartScenario()
@@ -84,14 +86,6 @@ namespace Main.Scripts.ApplicationCore.Clients
                 sceneLoaderController.Init(scene);
         }
 
-        private void SceneIsLoaded(string room)
-        {
-            if (string.IsNullOrEmpty(room)) return;
-
-            // realtimeMultiplayerController.Ready += RealtimeMultiplayerControllerReady;
-            // realtimeMultiplayerController.Init(room, _playerRoot, _handRoots, _vrikPoints, loginData);
-        }
-
         #endregion
 
         //////////////////////////////////////////////////////////////////////////////////////
@@ -131,6 +125,20 @@ namespace Main.Scripts.ApplicationCore.Clients
             _playerName = playerName;
             _room = room;
             LoadNewScene(scenes[1], room);
+        }
+        
+        private void SceneIsLoaded(string room)
+        {
+            if (string.IsNullOrEmpty(room)) return;
+
+            realtimeMultiplayerController.Ready += RealtimeMultiplayerControllerReady;
+            realtimeMultiplayerController.Init(room, _playerRoot, _handRoots, _vrikPoints, _playerName);
+        }
+        
+        private void RealtimeMultiplayerControllerReady()
+        {
+            realtimeMultiplayerController.Ready -= RealtimeMultiplayerControllerReady;
+            //InitializeTimelineTimeController();
         }
     }
 }
