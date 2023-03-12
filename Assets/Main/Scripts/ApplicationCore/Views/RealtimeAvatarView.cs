@@ -95,6 +95,9 @@ namespace Main.Scripts.ApplicationCore.Views
             _avatarTransform.localScale =
                 Vector3.one * playerAvatarData.GetHeight() / _avatarDefaultHeight;
 
+            voiceMouthMove.mouth =
+                _avatarTransform.Find("Unity compliant skeleton/hips/spine/chest/chest1/neck/head/jaw");
+
             // avatar.AddComponent<EyeAnimationHandler>();
             // var voiceHandler = avatar.AddComponent<VoiceHandler>();
             // voiceHandler.AudioProvider = AudioProviderType.AudioClip;

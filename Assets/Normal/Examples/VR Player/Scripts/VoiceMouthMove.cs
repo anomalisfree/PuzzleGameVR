@@ -26,9 +26,11 @@ namespace Normal.Realtime.Examples {
             if (mouth != null)
             {
                 // Apply the mouth size to the scale of the mouth geometry
-                Vector3 localScale = mouth.localScale;
-                localScale.y = _mouthSize;
-                mouth.localScale = localScale;
+                // Vector3 localScale = mouth.localScale;
+                // localScale.y = _mouthSize;
+                // mouth.localScale = localScale;
+                
+                mouth.transform.localRotation = Quaternion.Euler(new Vector3(131 + _mouthSize * 20, 0, 0));
             }
 
             // if (voiceHandler != null)
