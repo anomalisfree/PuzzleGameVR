@@ -12,9 +12,9 @@ namespace Main.Scripts.ApplicationCore.Views
 {
     public class RealtimeAvatarView : MonoBehaviour
     {
+        [SerializeField] private GameObject avatarModel;
         [SerializeField] private RealtimeView realtimeView;
         [SerializeField] private List<GameObject> localHideObjects;
-        [SerializeField] private Transform headPivot;
         [SerializeField] private Transform headTarget;
         [SerializeField] private Transform leftHandRoot;
         [SerializeField] private Transform leftHandTarget;
@@ -27,16 +27,10 @@ namespace Main.Scripts.ApplicationCore.Views
         [SerializeField] private RuntimeAnimatorController animatorController;
 
         private RealtimeMultiplayerController _realtimeMultiplayerController;
-        private bool _avatarLoaded;
         private string _playerName;
         private Transform _avatarTransform;
-        private GameObject _defaultAvatar;
         private float _avatarDefaultHeight;
         private GameObject _currentAvatar;
-        private bool _isVR;
-
-        private const float DefaultHeight = 1.55f;
-        private const float AvatarScaleDelta = 0.15f;
 
         private void Awake()
         {
@@ -74,10 +68,7 @@ namespace Main.Scripts.ApplicationCore.Views
                 _playerName = playerAvatarData.GetUsername();
             }
 
-            if (_avatarLoaded) yield break;
-
-            _avatarLoaded = true;
-            LoadAvatar();
+            InitAvatarModel();
         }
 
         private void OnDestroy()
@@ -85,31 +76,24 @@ namespace Main.Scripts.ApplicationCore.Views
             Destroy(_currentAvatar);
         }
 
-        private void LoadAvatar()
+        private void InitAvatarModel()
         {
-            //InitAvatarModel(avatar);
-        }
+            _currentAvatar = Instantiate(avatarModel);
 
-        private void InitAvatarModel(GameObject avatar)
-        {
-            _avatarTransform = avatar.transform;
+            _avatarTransform = _currentAvatar.transform;
             _avatarDefaultHeight =
-                _avatarTransform.Find("Armature/Hips/Spine/Spine1/Spine2/Neck/Head/LeftEye").position.y;
+                _avatarTransform.Find("Unity compliant skeleton/hips/spine/chest/chest1/neck/head/eye.L").position.y;
             _avatarTransform.localScale =
-                Vector3.one * PlayerPrefs.GetFloat("HeadDefaultHeight") / _avatarDefaultHeight;
-            _avatarTransform.Find("Armature/Hips/Spine/Spine1/Spine2/LeftShoulder/LeftArm/LeftForeArm/LeftHand")
-                .localScale = Vector3.zero;
-            _avatarTransform.Find("Armature/Hips/Spine/Spine1/Spine2/RightShoulder/RightArm/RightForeArm/RightHand")
-                .localScale = Vector3.zero;
+                Vector3.one * playerAvatarData.GetHeight() / _avatarDefaultHeight;
 
             // avatar.AddComponent<EyeAnimationHandler>();
             // var voiceHandler = avatar.AddComponent<VoiceHandler>();
             // voiceHandler.AudioProvider = AudioProviderType.AudioClip;
             // voiceMouthMove.voiceHandler = voiceHandler;
 
-            avatar.GetComponent<Animator>().runtimeAnimatorController = animatorController;
+            _currentAvatar.GetComponent<Animator>().runtimeAnimatorController = animatorController;
 
-            var vrik = avatar.AddComponent<VRIK>();
+            var vrik = _currentAvatar.GetComponent<VRIK>();
             vrik.solver.spine.headTarget = headTarget;
             vrik.solver.leftArm.target = leftHandTarget;
             vrik.solver.rightArm.target = rightHandTarget;
@@ -117,7 +101,7 @@ namespace Main.Scripts.ApplicationCore.Views
 
             if (realtimeView.isOwnedLocallySelf)
             {
-                avatar.layer = LayerMask.NameToLayer("Avatar");
+                _currentAvatar.layer = LayerMask.NameToLayer("Avatar");
             }
         }
 
@@ -126,20 +110,8 @@ namespace Main.Scripts.ApplicationCore.Views
             if (_avatarTransform != null)
             {
                 var avatarPosition = _avatarTransform.position;
-                var avatarRotation = _avatarTransform.rotation;
-
-                if (_isVR)
-                {
-                    avatarPosition = new Vector3(avatarPosition.x, modelPivot.position.y, avatarPosition.z);
-                }
-                else
-                {
-                    avatarPosition = transform.position + Vector3.down * DefaultHeight;
-                    avatarRotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-                }
-
+                avatarPosition = new Vector3(avatarPosition.x, modelPivot.position.y, avatarPosition.z);
                 _avatarTransform.position = avatarPosition;
-                _avatarTransform.rotation = avatarRotation;
             }
         }
 
