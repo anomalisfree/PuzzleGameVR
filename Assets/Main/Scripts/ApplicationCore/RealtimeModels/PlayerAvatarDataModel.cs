@@ -8,6 +8,7 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels
     {
         [RealtimeProperty(1, true )] private string _username;
         [RealtimeProperty(2, true )] private float _height;
+        [RealtimeProperty(3, true )] private int _gender;
     }
 }
 
@@ -36,9 +37,21 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels {
             }
         }
         
+        public int gender {
+            get {
+                return _genderProperty.value;
+            }
+            set {
+                if (_genderProperty.value == value) return;
+                _genderProperty.value = value;
+                InvalidateReliableLength();
+            }
+        }
+        
         public enum PropertyID : uint {
             Username = 1,
             Height = 2,
+            Gender = 3,
         }
         
         #region Properties
@@ -47,22 +60,27 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels {
         
         private ReliableProperty<float> _heightProperty;
         
+        private ReliableProperty<int> _genderProperty;
+        
         #endregion
         
         public PlayerAvatarDataModel() : base(null) {
             _usernameProperty = new ReliableProperty<string>(1, _username);
             _heightProperty = new ReliableProperty<float>(2, _height);
+            _genderProperty = new ReliableProperty<int>(3, _gender);
         }
         
         protected override void OnParentReplaced(RealtimeModel previousParent, RealtimeModel currentParent) {
             _usernameProperty.UnsubscribeCallback();
             _heightProperty.UnsubscribeCallback();
+            _genderProperty.UnsubscribeCallback();
         }
         
         protected override int WriteLength(StreamContext context) {
             var length = 0;
             length += _usernameProperty.WriteLength(context);
             length += _heightProperty.WriteLength(context);
+            length += _genderProperty.WriteLength(context);
             return length;
         }
         
@@ -70,6 +88,7 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels {
             var writes = false;
             writes |= _usernameProperty.Write(stream, context);
             writes |= _heightProperty.Write(stream, context);
+            writes |= _genderProperty.Write(stream, context);
             if (writes) InvalidateContextLength(context);
         }
         
@@ -84,6 +103,10 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels {
                     }
                     case (uint) PropertyID.Height: {
                         changed = _heightProperty.Read(stream, context);
+                        break;
+                    }
+                    case (uint) PropertyID.Gender: {
+                        changed = _genderProperty.Read(stream, context);
                         break;
                     }
                     default: {
@@ -101,6 +124,7 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels {
         private void UpdateBackingFields() {
             _username = username;
             _height = height;
+            _gender = gender;
         }
         
     }

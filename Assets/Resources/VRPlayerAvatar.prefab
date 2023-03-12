@@ -140,10 +140,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69986a17e7f73a74c8da3c40a09c7bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarModel: {fileID: 9180899247418940246, guid: c1c4ad232dd615643b48915fbe3d6dbe,
+  avatarMaleModel: {fileID: 9180899247418940246, guid: c1c4ad232dd615643b48915fbe3d6dbe,
+    type: 3}
+  avatarFemaleModel: {fileID: 2080679832438929408, guid: 83876d71873fe48418134ca314e8b0a4,
     type: 3}
   realtimeView: {fileID: 114879240156072798}
-  localHideObjects: []
+  localHideObjects:
+  - {fileID: 8113148199485157611}
+  - {fileID: 5317616364679113988}
   headTarget: {fileID: 5209952488376269483}
   leftHandRoot: {fileID: 2431468619465027177}
   leftHandTarget: {fileID: 7567392957654565281}

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Main.Scripts.ApplicationCore.Data;
 using Main.Scripts.ApplicationCore.Views;
 using Normal.Realtime;
 using UnityEngine;
@@ -22,17 +23,20 @@ namespace Main.Scripts.ApplicationCore.Controllers
         private List<Transform> _vrikPoints;
 
         private string _playerName;
+        private Gender _gender;
 
         public Action Ready;
         public string PlayerName => _playerName;
+        public Gender Gender => _gender;
 
         public void Init(string roomName, Transform vrPlayerRoot,
-            (Transform leftHandRoot, Transform rightHandRoot) handRoots, List<Transform> vrikPoints, string playerName)
+            (Transform leftHandRoot, Transform rightHandRoot) handRoots, List<Transform> vrikPoints, string playerName, Gender gender)
         {
             //_networkSettings = networkSettings;
             _vrPlayerRoot = vrPlayerRoot;
             _vrikPoints = vrikPoints;
             _playerName = playerName;
+            _gender = gender;
 
             if (_realtimeMultiplayerView == null)
             {

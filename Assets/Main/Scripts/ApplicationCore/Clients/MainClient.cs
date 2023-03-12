@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Main.Scripts.ApplicationCore.Controllers;
+using Main.Scripts.ApplicationCore.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -94,6 +95,7 @@ namespace Main.Scripts.ApplicationCore.Clients
         private List<Transform> _vrikPoints;
         private string _playerName;
         private string _room;
+        private Gender _gender;
         private Action _onFirstSceneLoad;
 
         private void InitializeVrPlayerController()
@@ -119,11 +121,12 @@ namespace Main.Scripts.ApplicationCore.Clients
             loginController.Init();
         }
         
-        private void OnLogin(string playerName, string room)
+        private void OnLogin(string playerName, string room, Gender gender)
         {
             loginController.IsLogin -= OnLogin;
             _playerName = playerName;
             _room = room;
+            _gender = gender;
             LoadNewScene(scenes[1], room);
         }
         
@@ -132,7 +135,7 @@ namespace Main.Scripts.ApplicationCore.Clients
             if (string.IsNullOrEmpty(room)) return;
 
             realtimeMultiplayerController.Ready += RealtimeMultiplayerControllerReady;
-            realtimeMultiplayerController.Init(room, _playerRoot, _handRoots, _vrikPoints, _playerName);
+            realtimeMultiplayerController.Init(room, _playerRoot, _handRoots, _vrikPoints, _playerName, _gender);
         }
         
         private void RealtimeMultiplayerControllerReady()

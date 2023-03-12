@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Main.Scripts.ApplicationCore.Clients;
 using Main.Scripts.ApplicationCore.Controllers;
+using Main.Scripts.ApplicationCore.Data;
 using Main.Scripts.ApplicationCore.RealtimeModels;
 using Normal.Realtime;
 using Normal.Realtime.Examples;
@@ -12,7 +13,8 @@ namespace Main.Scripts.ApplicationCore.Views
 {
     public class RealtimeAvatarView : MonoBehaviour
     {
-        [SerializeField] private GameObject avatarModel;
+        [SerializeField] private GameObject avatarMaleModel;
+        [SerializeField] private GameObject avatarFemaleModel;
         [SerializeField] private RealtimeView realtimeView;
         [SerializeField] private List<GameObject> localHideObjects;
         [SerializeField] private Transform headTarget;
@@ -31,6 +33,7 @@ namespace Main.Scripts.ApplicationCore.Views
         private Transform _avatarTransform;
         private float _avatarDefaultHeight;
         private GameObject _currentAvatar;
+        private Gender _gender;
 
         private void Awake()
         {
@@ -43,6 +46,7 @@ namespace Main.Scripts.ApplicationCore.Views
             {
                 _realtimeMultiplayerController = ClientBase.Instance.GetController<RealtimeMultiplayerController>();
                 _playerName = _realtimeMultiplayerController.PlayerName;
+                _gender = _realtimeMultiplayerController.Gender;
                 playerAvatarData.SetUsername(_playerName);
                 playerAvatarData.SetHeight(PlayerPrefs.GetFloat("HeadDefaultHeight"));
                 _realtimeMultiplayerController.SetAvatarHands(transform, (leftHandRoot, rightHandRoot));
@@ -78,7 +82,12 @@ namespace Main.Scripts.ApplicationCore.Views
 
         private void InitAvatarModel()
         {
-            _currentAvatar = Instantiate(avatarModel);
+            _currentAvatar = _gender switch
+            {
+                Gender.Male => Instantiate(avatarMaleModel),
+                Gender.Female => Instantiate(avatarFemaleModel),
+                _ => Instantiate(avatarMaleModel)
+            };
 
             _avatarTransform = _currentAvatar.transform;
             _avatarDefaultHeight =
