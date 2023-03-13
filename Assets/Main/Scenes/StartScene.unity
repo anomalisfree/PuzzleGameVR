@@ -184,6 +184,8 @@ GameObject:
   - component: {fileID: 2044775117}
   - component: {fileID: 2044775116}
   - component: {fileID: 2044775118}
+  - component: {fileID: 2044775120}
+  - component: {fileID: 2044775119}
   m_Layer: 0
   m_Name: CLIENT
   m_TagString: Untagged
@@ -257,6 +259,8 @@ MonoBehaviour:
   audioFXController: {fileID: 2044775117}
   loginController: {fileID: 2044775116}
   realtimeMultiplayerController: {fileID: 2044775118}
+  bundleLoaderController: {fileID: 2044775120}
+  timelineTimerController: {fileID: 2044775119}
 --- !u!114 &2044775116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,3 +308,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   realtimeMultiplayerView: {fileID: 2546483657323038189, guid: 073969913cf6e4048b3152be808a89c7,
     type: 3}
+--- !u!114 &2044775119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044775111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5da634c13cfe84fa7202f6b3e38985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timelineTimerView: {fileID: 9206877695095711745, guid: b5ee19572d9dc1644a98f1d818b46553,
+    type: 3}
+--- !u!114 &2044775120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044775111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6778c1279cf20884bafadbce3a930281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

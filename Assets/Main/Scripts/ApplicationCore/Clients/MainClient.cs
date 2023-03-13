@@ -19,6 +19,8 @@ namespace Main.Scripts.ApplicationCore.Clients
         [SerializeField] private AudioFXController audioFXController;
         [SerializeField] private LoginController loginController;
         [SerializeField] private RealtimeMultiplayerController realtimeMultiplayerController;
+        [SerializeField] private BundleLoaderController bundleLoaderController;
+        [SerializeField] private TimelineTimerController timelineTimerController;
 
 
         //Services
@@ -40,6 +42,8 @@ namespace Main.Scripts.ApplicationCore.Clients
             Controllers.Add(audioFXController);
             Controllers.Add(loginController);
             Controllers.Add(realtimeMultiplayerController);
+            Controllers.Add(bundleLoaderController);
+            Controllers.Add(timelineTimerController);
         }
 
         protected override void StartScenario()
@@ -141,7 +145,12 @@ namespace Main.Scripts.ApplicationCore.Clients
         private void RealtimeMultiplayerControllerReady()
         {
             realtimeMultiplayerController.Ready -= RealtimeMultiplayerControllerReady;
-            //InitializeTimelineTimeController();
+            InitializeTimelineTimeController();
+        }
+        
+        private void InitializeTimelineTimeController()
+        {
+            timelineTimerController.Init();
         }
     }
 }
