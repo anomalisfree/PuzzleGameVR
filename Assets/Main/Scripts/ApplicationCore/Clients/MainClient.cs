@@ -21,6 +21,7 @@ namespace Main.Scripts.ApplicationCore.Clients
         [SerializeField] private RealtimeMultiplayerController realtimeMultiplayerController;
         [SerializeField] private BundleLoaderController bundleLoaderController;
         [SerializeField] private TimelineTimerController timelineTimerController;
+        [SerializeField] private PuzzleController puzzleController;
 
 
         //Services
@@ -44,6 +45,7 @@ namespace Main.Scripts.ApplicationCore.Clients
             Controllers.Add(realtimeMultiplayerController);
             Controllers.Add(bundleLoaderController);
             Controllers.Add(timelineTimerController);
+            Controllers.Add(puzzleController);
         }
 
         protected override void StartScenario()
@@ -146,11 +148,17 @@ namespace Main.Scripts.ApplicationCore.Clients
         {
             realtimeMultiplayerController.Ready -= RealtimeMultiplayerControllerReady;
             InitializeTimelineTimeController();
+            InitializePuzzleController();
         }
         
         private void InitializeTimelineTimeController()
         {
             timelineTimerController.Init();
+        }
+        
+        private void InitializePuzzleController()
+        {
+            puzzleController.Init();
         }
     }
 }
