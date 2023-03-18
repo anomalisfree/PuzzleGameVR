@@ -1,25 +1,32 @@
 using System.Collections.Generic;
-using Autohand;
-using Normal.Realtime;
+using Main.Scripts.ApplicationCore.RealtimeModels;
 using UnityEngine;
 
 namespace Main.Scripts.ApplicationCore.Views
 {
     public class PuzzleView : MonoBehaviour
     {
-        [SerializeField] private List<GameObject> puzzlePieces;
+        [SerializeField] private List<PuzzlePieceData> puzzlePieces;
+        [SerializeField] private GameObject framePrefab;
+
+        private const float FrameSize = 0.2f;
 
         private void Start()
         {
-            foreach (var puzzlePiece in puzzlePieces)
+            var j = 0;
+
+            for (var i = 0; i < puzzlePieces.Count; i++)
             {
-                puzzlePiece.GetComponent<GrabbableBase>().body =  puzzlePiece.GetComponent<Rigidbody>();
-                //
-                // if (puzzlePiece.GetComponent<RealtimeTransform>().isUnownedSelf || puzzlePiece.GetComponent<RealtimeView>().isUnownedSelf)
-                // {
-                //     puzzlePiece.GetComponent<RealtimeView>().RequestOwnership();
-                //     puzzlePiece.GetComponent<RealtimeTransform>().RequestOwnership();
-                // }
+                puzzlePieces[i].Init(i);
+
+                if (i % Mathf.Sqrt(puzzlePieces.Count) == 0)
+                {
+                    j--;
+                }
+
+                Instantiate(framePrefab,
+                    new Vector3((-i - j * Mathf.Sqrt(puzzlePieces.Count))* FrameSize, 0, j * FrameSize),
+                    Quaternion.identity);
             }
         }
     }
