@@ -13,10 +13,5 @@ namespace Main.Scripts.VR.UI
         {
             return imagePivot;
         }
-
-        public int GetNum()
-        {
-            return num;
-        }
     }
 }

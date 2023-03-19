@@ -348,5 +348,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6228f0d1ec60ba4184000a4599d41ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleView: {fileID: 3805231286963914069, guid: 863b6c7874db92445ace4fcb37848541,
+  puzzleView: {fileID: 4887273340304852361, guid: ed5578b5be46f234bbe6fc3025a9eaeb,
     type: 3}

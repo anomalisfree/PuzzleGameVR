@@ -61,14 +61,15 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels
 
                     model.rot = y;
 
-                    var rotationThis = _currentFramePivot.rotation;
+                    var rotationFrame = _currentFramePivot.rotation;
                     transform.rotation = Quaternion.Lerp(transform.rotation,
-                        Quaternion.Euler(rotationThis.eulerAngles.x, model.rot,
-                            rotationThis.eulerAngles.z), Time.deltaTime * 20);
+                        Quaternion.Euler(rotationFrame.eulerAngles.x, model.rot,
+                            rotationFrame.eulerAngles.z), Time.deltaTime * 20);
 
-                    if (model.rot == 0 && _currentFrame.GetNum() == model.num)
+                    if (model.rot == 180 && _currentFrame.num == model.num)
                     {
                         model.isCorrect = true;
+                        //Debug.Log("IsCorrect " + model.num);
                     }
                     else
                     {
