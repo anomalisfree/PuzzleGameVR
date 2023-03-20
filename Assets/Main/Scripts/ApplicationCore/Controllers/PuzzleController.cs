@@ -25,6 +25,8 @@ namespace Main.Scripts.ApplicationCore.Controllers
                 _puzzleView = Realtime
                     .Instantiate(puzzleView.gameObject.name, options)
                     .GetComponent<PuzzleView>();
+                
+                _puzzleView.StartNewPuzzle();
             }
         }
     }

@@ -33220,6 +33220,11 @@ MonoBehaviour:
   framePrefab: {fileID: 3496081612845062308, guid: 765b40b9dac7ff743a85966796bcd2e4,
     type: 3}
   startFrameDelta: {x: 1.3, y: 0, z: 1.3}
+  startPoints:
+  - {x: -2, y: 0, z: 2}
+  - {x: 2, y: 0, z: 2}
+  - {x: -2, y: 0, z: -2}
+  - {x: 2, y: 0, z: -2}
 --- !u!1 &8316219467574779008
 GameObject:
   m_ObjectHideFlags: 0
