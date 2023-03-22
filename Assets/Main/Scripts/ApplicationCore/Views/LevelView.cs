@@ -11,8 +11,6 @@ namespace Main.Scripts.ApplicationCore.Views
         [SerializeField] private List<Sprite> previews;
         [SerializeField] private Material imageMaterial;
 
-        private int _currentImageNum;
-
         private const float HeightStep = 0.3f;
 
 
@@ -23,18 +21,18 @@ namespace Main.Scripts.ApplicationCore.Views
 
         public void UpdateImageMaterial()
         {
-            SetNewImage(_currentImageNum);
+            SetNewImage(levelData.GetImageNum());
         }
         
         public void SetNewImage(int num)
         {
-            _currentImageNum = num;
+            levelData.SetImageNum(num);
             imageMaterial.mainTexture = images[num];
         }
 
         public Sprite GetImagePreview()
         {
-            return previews[_currentImageNum];
+            return previews[levelData.GetImageNum()];
         }
         
         public void FrameUp()

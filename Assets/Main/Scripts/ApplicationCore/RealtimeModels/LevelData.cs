@@ -18,5 +18,15 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels
         {
             return model.frameHeight;
         }
+
+        public void SetImageNum(int num)
+        {
+            model.imageNum = num;
+        }
+
+        public int GetImageNum()
+        {
+            return model.imageNum;
+        }
     }
 }
