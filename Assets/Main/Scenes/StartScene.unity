@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 2044775120}
   - component: {fileID: 2044775119}
   - component: {fileID: 2044775121}
+  - component: {fileID: 2044775122}
   m_Layer: 0
   m_Name: CLIENT
   m_TagString: Untagged
@@ -262,6 +263,7 @@ MonoBehaviour:
   realtimeMultiplayerController: {fileID: 2044775118}
   bundleLoaderController: {fileID: 2044775120}
   timelineTimerController: {fileID: 2044775119}
+  levelController: {fileID: 2044775122}
   puzzleController: {fileID: 2044775121}
 --- !u!114 &2044775116
 MonoBehaviour:
@@ -349,4 +351,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleView: {fileID: 4887273340304852361, guid: ed5578b5be46f234bbe6fc3025a9eaeb,
+    type: 3}
+--- !u!114 &2044775122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044775111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0756080347d957e4bbe6353430d4eb72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelView: {fileID: 6376717711912559915, guid: e1eb2ce006e43b44ba5e19f738469f28,
     type: 3}

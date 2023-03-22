@@ -28,7 +28,6 @@ namespace Main.Scripts.ApplicationCore.Controllers
                 
                 _timelineTimerView.Play();
             }
-            
         }
     }
 }

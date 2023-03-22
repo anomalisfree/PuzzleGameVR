@@ -21,6 +21,7 @@ namespace Main.Scripts.ApplicationCore.Clients
         [SerializeField] private RealtimeMultiplayerController realtimeMultiplayerController;
         [SerializeField] private BundleLoaderController bundleLoaderController;
         [SerializeField] private TimelineTimerController timelineTimerController;
+        [SerializeField] private LevelController levelController;
         [SerializeField] private PuzzleController puzzleController;
 
 
@@ -45,6 +46,7 @@ namespace Main.Scripts.ApplicationCore.Clients
             Controllers.Add(realtimeMultiplayerController);
             Controllers.Add(bundleLoaderController);
             Controllers.Add(timelineTimerController);
+            Controllers.Add(levelController);
             Controllers.Add(puzzleController);
         }
 
@@ -148,6 +150,7 @@ namespace Main.Scripts.ApplicationCore.Clients
         {
             realtimeMultiplayerController.Ready -= RealtimeMultiplayerControllerReady;
             InitializeTimelineTimeController();
+            InitializeLevelController();
             InitializePuzzleController();
         }
         
@@ -159,6 +162,11 @@ namespace Main.Scripts.ApplicationCore.Clients
         private void InitializePuzzleController()
         {
             puzzleController.Init();
+        }
+
+        private void InitializeLevelController()
+        {
+            levelController.Init();
         }
     }
 }
