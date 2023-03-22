@@ -7256,7 +7256,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b80c97b0ad398d54b8570b6ae98653a1, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8876,6 +8876,7 @@ MonoBehaviour:
   openWatchAction: {fileID: 5113088590926889233, guid: 910edfb9b2b5d8e4088454a4edbc453d,
     type: 3}
   menu: {fileID: 2717163392496415483}
+  image: {fileID: 5231590804479475158}
 --- !u!4 &2246154115794014287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a57782b228a313d43b5fbfa8ee137507,

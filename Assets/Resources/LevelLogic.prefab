@@ -70,6 +70,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelData: {fileID: 5593399072956805466}
+  images:
+  - {fileID: 2800000, guid: b80c97b0ad398d54b8570b6ae98653a1, type: 3}
+  - {fileID: 2800000, guid: 205503483c4fe7544a11cf7100f27138, type: 3}
+  previews:
+  - {fileID: 21300000, guid: 4727246172bdc2c488a6bd86a45ea211, type: 3}
+  - {fileID: 21300000, guid: 42f5aeb2d7b3db1439ca539bc80ee7b0, type: 3}
+  imageMaterial: {fileID: 2100000, guid: 1e821fcefb39985478c52f8bcec1d25a, type: 2}
 --- !u!114 &5593399072956805466
 MonoBehaviour:
   m_ObjectHideFlags: 0
