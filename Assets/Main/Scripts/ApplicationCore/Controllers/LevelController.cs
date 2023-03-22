@@ -19,7 +19,7 @@ namespace Main.Scripts.ApplicationCore.Controllers
                 var options = new Realtime.InstantiateOptions
                 {
                     destroyWhenOwnerLeaves = false,
-                    destroyWhenLastClientLeaves = false
+                    destroyWhenLastClientLeaves = true
                 };
 
                 _levelView = Realtime

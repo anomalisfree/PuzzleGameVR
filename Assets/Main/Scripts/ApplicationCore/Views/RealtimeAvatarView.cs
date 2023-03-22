@@ -7,6 +7,7 @@ using Main.Scripts.ApplicationCore.RealtimeModels;
 using Normal.Realtime;
 using Normal.Realtime.Examples;
 using RootMotion.FinalIK;
+using TMPro;
 using UnityEngine;
 
 namespace Main.Scripts.ApplicationCore.Views
@@ -97,6 +98,10 @@ namespace Main.Scripts.ApplicationCore.Views
 
             voiceMouthMove.mouth =
                 _avatarTransform.Find("Unity compliant skeleton/hips/spine/chest/chest1/neck/head/jaw");
+
+            _avatarTransform
+                .Find("Unity compliant skeleton/hips/spine/chest/chest1/neck/head/HeadsetAndroid:Headset/Name")
+                .GetComponent<TextMeshPro>().text = playerAvatarData.GetUsername();
 
             // avatar.AddComponent<EyeAnimationHandler>();
             // var voiceHandler = avatar.AddComponent<VoiceHandler>();
