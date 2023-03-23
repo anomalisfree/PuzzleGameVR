@@ -1,5 +1,7 @@
 using Main.Scripts.ApplicationCore.Views;
+using Main.Scripts.VR.UI;
 using Normal.Realtime;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Main.Scripts.ApplicationCore.Controllers
@@ -28,6 +30,20 @@ namespace Main.Scripts.ApplicationCore.Controllers
                 
                 _puzzleView.StartNewPuzzle();
             }
+
+            _puzzleView.Done += PuzzleDone;
+        }
+
+        private void PuzzleDone()
+        {
+            var framePivot = FindObjectOfType<FramePivot>();
+            
+            if (framePivot != null)
+            {
+                framePivot.EndPuzzle();
+            }
+            
+            Destroy(_puzzleView.GameObject());
         }
     }
 }

@@ -115,5 +115,10 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels
             model.inFrame = false;
             _currentFrame = null;
         }
+
+        public bool IsCorrect()
+        {
+            return model.isCorrect;
+        }
     }
 }

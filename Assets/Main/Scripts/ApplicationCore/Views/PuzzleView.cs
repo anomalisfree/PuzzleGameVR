@@ -1,8 +1,12 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Main.Scripts.ApplicationCore.RealtimeModels;
 using Main.Scripts.VR.UI;
 using Normal.Realtime;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Main.Scripts.ApplicationCore.Views
 {
@@ -14,10 +18,13 @@ namespace Main.Scripts.ApplicationCore.Views
 
         [SerializeField] private List<Vector3> startPoints;
 
+        public Action Done;
+
 
         private FramePivot _framePivot;
 
         private const float FrameSize = 0.2f;
+        private const float CheckingTime = 1f;
 
         private void Start()
         {
@@ -44,6 +51,8 @@ namespace Main.Scripts.ApplicationCore.Views
 
                 frame.GetComponent<Frame>().num = i;
             }
+
+            StartCoroutine(CheckPuzzle());
         }
 
         public void StartNewPuzzle()
@@ -57,6 +66,20 @@ namespace Main.Scripts.ApplicationCore.Views
                 
                 puzzlePiece.GetComponent<RealtimeView>().RequestOwnership();
                 puzzlePiece.GetComponent<RealtimeTransform>().RequestOwnership();
+            }
+        }
+
+        private IEnumerator CheckPuzzle()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(1);
+                var correctPuzzles = puzzlePieces.Count(puzzlePiece => puzzlePiece.IsCorrect());
+                
+                if (correctPuzzles == puzzlePieces.Count)
+                {
+                    Done?.Invoke();
+                }
             }
         }
     }
