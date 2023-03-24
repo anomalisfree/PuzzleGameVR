@@ -53,6 +53,20 @@ namespace Main.Scripts.ApplicationCore.Views
             }
 
             StartCoroutine(CheckPuzzle());
+
+            //StartCoroutine(CheckFinish());
+        }
+
+
+        private IEnumerator CheckFinish()
+        {
+            yield return new WaitForSeconds(10f);
+            
+            foreach (var puzzlePiece in puzzlePieces)
+            {
+                puzzlePiece.GetComponent<RealtimeView>().RequestOwnership();
+                puzzlePiece.SetTestCorrect();
+            }
         }
 
         public void StartNewPuzzle()

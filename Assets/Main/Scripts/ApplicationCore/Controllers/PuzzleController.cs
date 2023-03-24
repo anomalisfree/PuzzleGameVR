@@ -43,7 +43,7 @@ namespace Main.Scripts.ApplicationCore.Controllers
                 framePivot.EndPuzzle();
             }
             
-            Destroy(_puzzleView.GameObject());
+            Realtime.Destroy(_puzzleView.gameObject);
         }
     }
 }

@@ -12,6 +12,8 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels
         private Transform _currentFramePivot;
         private Transform _startParent;
 
+        private bool _isTest;
+
         public void Init(int num)
         {
             GetComponent<GrabbableBase>().body = GetComponent<Rigidbody>();
@@ -22,6 +24,8 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels
 
         private void Update()
         {
+            if(_isTest) return;
+
             if (realtimeView.isOwnedLocallySelf)
                 if (model.inFrame)
                 {
@@ -119,6 +123,12 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels
         public bool IsCorrect()
         {
             return model.isCorrect;
+        }
+
+        public void SetTestCorrect()
+        {
+            _isTest = true;
+            model.isCorrect = true;
         }
     }
 }
