@@ -49,6 +49,7 @@ namespace Main.Scripts.ApplicationCore.Views
                 _playerName = _realtimeMultiplayerController.PlayerName;
                 _gender = _realtimeMultiplayerController.Gender;
                 playerAvatarData.SetUsername(_playerName);
+                playerAvatarData.SetGender(_gender);
                 playerAvatarData.SetHeight(PlayerPrefs.GetFloat("HeadDefaultHeight"));
                 _realtimeMultiplayerController.SetAvatarHands(transform, (leftHandRoot, rightHandRoot));
 
@@ -83,7 +84,7 @@ namespace Main.Scripts.ApplicationCore.Views
 
         private void InitAvatarModel()
         {
-            _currentAvatar = _gender switch
+            _currentAvatar = playerAvatarData.GetGender() switch
             {
                 Gender.Male => Instantiate(avatarMaleModel),
                 Gender.Female => Instantiate(avatarFemaleModel),
@@ -130,31 +131,6 @@ namespace Main.Scripts.ApplicationCore.Views
                 avatarPosition = new Vector3(avatarPosition.x, modelPivot.position.y, avatarPosition.z);
                 _avatarTransform.position = avatarPosition;
             }
-        }
-
-        public string GetPlayerName()
-        {
-            return _playerName;
-        }
-
-        public void BlockUser()
-        {
-            gameObject.SetActive(false);
-        }
-
-        public void UnblockUser()
-        {
-            gameObject.SetActive(true);
-        }
-
-        public void Mute()
-        {
-            realtimeAvatarVoice.enabled = false;
-        }
-
-        public void Unmute()
-        {
-            realtimeAvatarVoice.enabled = true;
         }
     }
 }

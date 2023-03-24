@@ -123,6 +123,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f071a36130522eb41ab5421f91abc8d5, type: 3}
   - {fileID: 21300000, guid: 2d231024631b8884eaf542a14ed48c13, type: 3}
   imageMaterial: {fileID: 2100000, guid: 1e821fcefb39985478c52f8bcec1d25a, type: 2}
+  realtimeView: {fileID: 383219014664021095}
 --- !u!114 &5593399072956805466
 MonoBehaviour:
   m_ObjectHideFlags: 0

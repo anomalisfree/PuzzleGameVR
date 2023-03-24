@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Main.Scripts.ApplicationCore.RealtimeModels;
+using Normal.Realtime;
 using UnityEngine;
 
 namespace Main.Scripts.ApplicationCore.Views
@@ -10,6 +11,7 @@ namespace Main.Scripts.ApplicationCore.Views
         [SerializeField] private List<Texture> images;
         [SerializeField] private List<Sprite> previews;
         [SerializeField] private Material imageMaterial;
+        [SerializeField] private RealtimeView realtimeView;
 
         private const float HeightStep = 0.3f;
 
@@ -21,6 +23,7 @@ namespace Main.Scripts.ApplicationCore.Views
 
         public void SetNextImage()
         {
+            realtimeView.RequestOwnership();
             levelData.SetImageNum(levelData.GetImageNum() + 1);
 
             if (levelData.GetImageNum() < images.Count)
@@ -45,11 +48,13 @@ namespace Main.Scripts.ApplicationCore.Views
 
         public void FrameUp()
         {
+            realtimeView.RequestOwnership();
             levelData.SetHeight(levelData.GetHeight() + HeightStep);
         }
 
         public void FrameDown()
         {
+            realtimeView.RequestOwnership();
             levelData.SetHeight(levelData.GetHeight() - HeightStep);
         }
 

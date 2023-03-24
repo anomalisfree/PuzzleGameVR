@@ -226,7 +226,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2790541720869382586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,7 +493,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8555505330427295616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,7 +760,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5354385161960759355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8364236767398065378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1294,7 +1294,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8799243311062614483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1561,7 +1561,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &9047329207266713956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1828,7 +1828,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6189160316892940270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2095,7 +2095,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5994756270437236218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2362,7 +2362,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6870473192138137142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2629,7 +2629,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3815293041780738500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2896,7 +2896,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8337689158364669508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3163,7 +3163,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &1755751774769737454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3430,7 +3430,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &1474469341184232719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3697,7 +3697,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2220126579382184719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3964,7 +3964,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4235322913462852217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4231,7 +4231,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3273962170067034268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4498,7 +4498,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8988882336872883483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4765,7 +4765,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8820685367487783650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5032,7 +5032,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8296103257130813015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5299,7 +5299,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3414152572699659174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5566,7 +5566,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &1764045758854088535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5833,7 +5833,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6668933833841206871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6100,7 +6100,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8493256628591628741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6367,7 +6367,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8010029361544477388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6634,7 +6634,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5564645509215845719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6901,7 +6901,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6718829786196736237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7168,7 +7168,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8312758174874999678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7435,7 +7435,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2497196643239936782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7702,7 +7702,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8793196133403471660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7969,7 +7969,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2899944196912670005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8236,7 +8236,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5300941923478107094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8503,7 +8503,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8654070268621939399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8770,7 +8770,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6178964411472667213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9037,7 +9037,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6873227774583960960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9304,7 +9304,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5523518284420831166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9571,7 +9571,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &227679451538664739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9838,7 +9838,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2703911484649372143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10105,7 +10105,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &877769864154772223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10372,7 +10372,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8526250365034704355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10639,7 +10639,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8737357051446443105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10906,7 +10906,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &7315240970571027198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11173,7 +11173,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &101567186776814776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11440,7 +11440,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &7604410604913819423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11707,7 +11707,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5402434531819944084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11974,7 +11974,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2220540670903777912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12241,7 +12241,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8151959256049971361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12508,7 +12508,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5858278398200030781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12775,7 +12775,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6574466674611175685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13042,7 +13042,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8885893791582460347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13309,7 +13309,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6472848289953571864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13576,7 +13576,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5479871739704016543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13843,7 +13843,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6501159429550022864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14110,7 +14110,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &7717877693335092957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14377,7 +14377,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3860806641817427698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14644,7 +14644,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3758618908536180223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14911,7 +14911,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4341494957771438699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15178,7 +15178,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3036668965120027635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15445,7 +15445,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4705602899847667609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15712,7 +15712,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6188430495497231453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15979,7 +15979,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &7404602951531700314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16246,7 +16246,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3867141725652916806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16513,7 +16513,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &1666964507682679234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16780,7 +16780,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &385669233211167661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17047,7 +17047,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &414279198509703499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17314,7 +17314,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &7157326088399135900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17581,7 +17581,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8076869130118116394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17848,7 +17848,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2035532243924737443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18115,7 +18115,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2870366212890059525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18382,7 +18382,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5002464957742667342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18649,7 +18649,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3899801912496098252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18916,7 +18916,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8253847905555807565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19183,7 +19183,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4693011198383376532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19450,7 +19450,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5770181795172041573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19717,7 +19717,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2383643113087728395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19984,7 +19984,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3355777845531887115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20251,7 +20251,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4200289732386583718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20518,7 +20518,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &1480847054061930291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20785,7 +20785,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &9166056151084112172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21052,7 +21052,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2652293142849805809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21319,7 +21319,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &9045756866125391731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21586,7 +21586,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &1410535079782376363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21853,7 +21853,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2555353105044576185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22120,7 +22120,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3852357200349873525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22387,7 +22387,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8630686140614732504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22654,7 +22654,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5535329184291510648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22921,7 +22921,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &7702591517806391661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23188,7 +23188,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3419418223077727316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23455,7 +23455,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5355938327325548254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23722,7 +23722,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4135018688176750605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23989,7 +23989,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &444817421025688104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24256,7 +24256,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5790033435978412205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24523,7 +24523,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2742535614730110597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24790,7 +24790,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &528762177588389941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25057,7 +25057,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5995384997682011457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25324,7 +25324,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &879129274152559563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25591,7 +25591,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8130974951986435879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25858,7 +25858,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6035267188710051929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26125,7 +26125,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4153229829845561360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26392,7 +26392,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &1584689529051369855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26659,7 +26659,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &7730099762747868971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26926,7 +26926,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5482674063861874169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27193,7 +27193,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &9093052686088522475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27460,7 +27460,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3280151992242938325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27727,7 +27727,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &1388696851034223408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27994,7 +27994,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3497473508722048378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28261,7 +28261,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4459407178431876403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28528,7 +28528,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6454971575603478218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28795,7 +28795,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &7565455774584053985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29062,7 +29062,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6903025031745413192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29329,7 +29329,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8633949383840374854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29596,7 +29596,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &803787940816498138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29863,7 +29863,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3874280704112553969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30130,7 +30130,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4577216995530304852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30397,7 +30397,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6138285892426359929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30664,7 +30664,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &7097458719797973358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30931,7 +30931,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6302732425370227667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31198,7 +31198,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3318115487825234008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31465,7 +31465,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &1666981950257173685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31732,7 +31732,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8986373358329535846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31999,7 +31999,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3082185871339520558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32266,7 +32266,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &5291960775638561360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32533,7 +32533,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2417076231184961590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33451,7 +33451,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8878879301675263231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33718,7 +33718,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3960263768137941858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33985,7 +33985,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2453495245374933028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34252,7 +34252,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3988179945132760653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34519,7 +34519,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3420556815377577467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34786,7 +34786,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8752024372135770871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35053,7 +35053,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4219190768785324255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35320,7 +35320,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &116752942137116465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35587,7 +35587,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3292544692933089430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35854,7 +35854,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &722136532668402393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36121,7 +36121,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2032886438940186762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36388,7 +36388,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &2204359653025768658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36655,7 +36655,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4527957296063780927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36922,7 +36922,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3872263724733061600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37189,7 +37189,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &3300916470026301953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37456,7 +37456,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4203124652810363792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37723,7 +37723,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &8223478230553626024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37990,7 +37990,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &6103602247165100199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38257,7 +38257,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4472307030429174270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38524,7 +38524,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &7631667431814301209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38791,7 +38791,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4865542995114631283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39058,7 +39058,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 0
   _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!114 &4014831631840913309
 MonoBehaviour:
   m_ObjectHideFlags: 0

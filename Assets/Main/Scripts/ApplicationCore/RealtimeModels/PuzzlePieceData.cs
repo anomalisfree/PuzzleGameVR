@@ -29,6 +29,8 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels
             if (realtimeView.isOwnedLocallySelf)
                 if (model.inFrame)
                 {
+                    if(_currentFramePivot == null) return;
+                    
                     Transform transformThis;
                     (transformThis = transform).position = Vector3.MoveTowards(transform.position,
                         _currentFramePivot.position,
