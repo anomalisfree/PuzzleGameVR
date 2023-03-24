@@ -44,6 +44,11 @@ namespace Main.Scripts.VR.Other
             }
         }
 
+        public void CloseWatch()
+        {
+            _isOpen = false;
+        }
+
         private void Update()
         {
             if (Camera.main != null) menu.LookAt(Camera.main.transform.position);

@@ -16,17 +16,25 @@ namespace Main.Scripts.ApplicationCore.Views
 
         public void Init()
         {
-            SetNewImage(0);
+            SetImage(levelData.GetImageNum());
         }
 
-        public void UpdateImageMaterial()
+        public void SetNextImage()
         {
-            SetNewImage(levelData.GetImageNum());
+            levelData.SetImageNum(levelData.GetImageNum() + 1);
+
+            if (levelData.GetImageNum() < images.Count)
+            {
+                SetImage(levelData.GetImageNum());
+            }
+            else
+            {
+                WinTheGame();
+            }
         }
-        
-        public void SetNewImage(int num)
+
+        public void SetImage(int num)
         {
-            levelData.SetImageNum(num);
             imageMaterial.mainTexture = images[num];
         }
 
@@ -34,12 +42,12 @@ namespace Main.Scripts.ApplicationCore.Views
         {
             return previews[levelData.GetImageNum()];
         }
-        
+
         public void FrameUp()
         {
             levelData.SetHeight(levelData.GetHeight() + HeightStep);
         }
-        
+
         public void FrameDown()
         {
             levelData.SetHeight(levelData.GetHeight() - HeightStep);
@@ -48,6 +56,11 @@ namespace Main.Scripts.ApplicationCore.Views
         public float GetFrameHeight()
         {
             return levelData.GetHeight();
+        }
+
+        private void WinTheGame()
+        {
+            Debug.Log("You win a game!");
         }
     }
 }

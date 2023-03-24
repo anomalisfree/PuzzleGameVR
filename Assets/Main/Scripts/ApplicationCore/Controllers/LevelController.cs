@@ -25,14 +25,14 @@ namespace Main.Scripts.ApplicationCore.Controllers
                 _levelView = Realtime
                     .Instantiate(levelView.gameObject.name, options)
                     .GetComponent<LevelView>();
-                
-                _levelView.Init();
-            }
-            else
-            {
-                _levelView.UpdateImageMaterial();
             }
             
+            _levelView.Init();
+        }
+
+        public void StartNextPuzzle()
+        {
+            _levelView.SetNextImage();
         }
     }
 }

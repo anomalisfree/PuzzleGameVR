@@ -1,7 +1,9 @@
+using System.Collections;
+using Main.Scripts.ApplicationCore.Clients;
 using Main.Scripts.ApplicationCore.Views;
+using Main.Scripts.VR.Other;
 using Main.Scripts.VR.UI;
 using Normal.Realtime;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Main.Scripts.ApplicationCore.Controllers
@@ -44,6 +46,15 @@ namespace Main.Scripts.ApplicationCore.Controllers
             }
             
             Realtime.Destroy(_puzzleView.gameObject);
+            StartCoroutine(StartNextPuzzle());
+        }
+
+        private IEnumerator StartNextPuzzle()
+        {
+            yield return new WaitForSeconds(8f);
+            ClientBase.Instance.GetController<LevelController>().StartNextPuzzle();
+            Init();
+            FindObjectOfType<Watch>().CloseWatch();
         }
     }
 }
