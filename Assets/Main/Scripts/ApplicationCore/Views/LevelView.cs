@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using Main.Scripts.ApplicationCore.Clients;
+using Main.Scripts.ApplicationCore.Controllers;
 using Main.Scripts.ApplicationCore.RealtimeModels;
 using Normal.Realtime;
 using UnityEngine;
@@ -50,12 +52,14 @@ namespace Main.Scripts.ApplicationCore.Views
         {
             realtimeView.RequestOwnership();
             levelData.SetHeight(levelData.GetHeight() + HeightStep);
+            ClientBase.Instance.GetController<PuzzleController>().RequestOwnershipOnFrame();
         }
 
         public void FrameDown()
         {
             realtimeView.RequestOwnership();
             levelData.SetHeight(levelData.GetHeight() - HeightStep);
+            ClientBase.Instance.GetController<PuzzleController>().RequestOwnershipOnFrame();
         }
 
         public float GetFrameHeight()

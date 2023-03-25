@@ -132,5 +132,10 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels
             _isTest = true;
             model.isCorrect = true;
         }
+
+        public bool IsInFrame()
+        {
+            return model.inFrame;
+        }
     }
 }
