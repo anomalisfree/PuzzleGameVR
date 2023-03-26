@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -15,10 +16,15 @@ namespace Main.Scripts.VR.HeightChecker
         [SerializeField] private Transform head;
         [SerializeField] private Image setImage;
 
+        [SerializeField] private List<GameObject> objectsToHide;
+        [SerializeField] private List<GameObject> objectsToShow;
+
         private float _leftHandTriggerValue;
         private float _rightHandTriggerValue;
 
         private const float HeightDelta = -0.15f;
+
+        private bool _isOk;
 
         private void Start()
         {
@@ -55,6 +61,8 @@ namespace Main.Scripts.VR.HeightChecker
 
         private void Update()
         {
+            if(_isOk) return;
+            
             if (!XRGeneralSettings.Instance.Manager.isInitializationComplete) return;
             if (leftHandTrigger == null || rightHandTrigger == null) return;
 
@@ -65,6 +73,24 @@ namespace Main.Scripts.VR.HeightChecker
             if (!((_leftHandTriggerValue + _rightHandTriggerValue) > 1.9f)) return;
             
             PlayerPrefs.SetFloat("HeadDefaultHeight", head.position.y + HeightDelta);
+            _isOk = true;
+
+            StartCoroutine(ShowTitle());
+        }
+
+        private IEnumerator ShowTitle()
+        {
+            foreach (var objectToHide in objectsToHide)
+            {
+                objectToHide.SetActive(false);
+            }
+            
+            foreach (var objectToShow in objectsToShow)
+            {
+                objectToShow.SetActive(true);
+            }
+            
+            yield return new WaitForSeconds(5);
             SceneManager.LoadScene(sceneBuildIndex: 1);
         }
     }
