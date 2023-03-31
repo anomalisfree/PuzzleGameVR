@@ -43,18 +43,22 @@ namespace Main.Scripts.ApplicationCore.Controllers
             {
                 0 => puzzlePiece4x4,
                 1 => puzzlePiece4x4,
-                2 => puzzlePiece4x4,
-                3 => puzzlePiece4x4,
-                4 => puzzlePiece4x4,
-                5 => puzzlePiece4x4,
-                6 => puzzlePiece4x4,
-                7 => puzzlePiece4x4,
-                8 => puzzlePiece4x4,
-                9 => puzzlePiece4x4,
-                10 => puzzlePiece4x4,
-                11 => puzzlePiece4x4,
-                12 => puzzlePiece4x4,
-                _ => _puzzlePiecePrefabs
+                2 => puzzlePiece5x5,
+                3 => puzzlePiece5x5,
+                4 => puzzlePiece6x6,
+                5 => puzzlePiece6x6,
+                6 => puzzlePiece7x7,
+                7 => puzzlePiece7x7,
+                8 => puzzlePiece8x8,
+                9 => puzzlePiece8x8,
+                10 => puzzlePiece9x9,
+                11 => puzzlePiece9x9,
+                12 => puzzlePiece10x10,
+                13 => puzzlePiece10x10,
+                14 => puzzlePiece11x11,
+                15 => puzzlePiece11x11,
+                16 => puzzlePiece12x12,
+                _ => puzzlePiece12x12
             };
 
             _framePivot = FindObjectOfType<FramePivot>();

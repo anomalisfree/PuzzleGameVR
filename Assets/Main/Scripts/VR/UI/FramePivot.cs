@@ -89,7 +89,7 @@ namespace Main.Scripts.VR.UI
             levelButtons[3].GetComponent<RectTransform>().localPosition =
                 new Vector3(-1, 0, -1) * (edgePoint) + new Vector3(0, 0.1f, 0);
 
-            endFrame.transform.localScale = endFrame.transform.localScale / 12f * Mathf.Sqrt(puzzleCount);
+            endFrame.transform.localScale = Vector3.one / 12f * Mathf.Sqrt(puzzleCount);
             top.GetComponent<RectTransform>().localPosition =  new Vector3(0, 0, 1) * (edgePoint + 0.05f);
         }
     }
