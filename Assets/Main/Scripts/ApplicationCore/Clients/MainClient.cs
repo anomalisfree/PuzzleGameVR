@@ -151,7 +151,7 @@ namespace Main.Scripts.ApplicationCore.Clients
             realtimeMultiplayerController.Ready -= RealtimeMultiplayerControllerReady;
             InitializeTimelineTimeController();
             InitializeLevelController();
-            InitializePuzzleController();
+            //InitializePuzzleController();
         }
         
         private void InitializeTimelineTimeController()
@@ -159,10 +159,10 @@ namespace Main.Scripts.ApplicationCore.Clients
             timelineTimerController.Init();
         }
         
-        private void InitializePuzzleController()
-        {
-            puzzleController.Init();
-        }
+        // private void InitializePuzzleController()
+        // {
+        //     puzzleController.Init();
+        // }
 
         private void InitializeLevelController()
         {

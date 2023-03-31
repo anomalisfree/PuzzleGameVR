@@ -21,6 +21,7 @@ namespace Main.Scripts.ApplicationCore.Views
         public void Init()
         {
             SetImage(levelData.GetImageNum());
+            ClientBase.Instance.GetController<PuzzleController>().Init(levelData.GetImageNum());
         }
 
         public void SetNextImage()
@@ -41,6 +42,7 @@ namespace Main.Scripts.ApplicationCore.Views
         public void SetImage(int num)
         {
             imageMaterial.mainTexture = images[num];
+            ClientBase.Instance.GetController<PuzzleController>().SetCurrentImageNum(num);
         }
 
         public Sprite GetImagePreview()

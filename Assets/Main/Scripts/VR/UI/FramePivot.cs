@@ -77,5 +77,20 @@ namespace Main.Scripts.VR.UI
             connectionDisplay.SetActive(!isConnected);
             top.SetActive(isConnected);
         }
+
+        public void SetFrameSize(float edgePoint, int puzzleCount)
+        {
+            levelButtons[0].GetComponent<RectTransform>().localPosition =
+                new Vector3(-1, 0, 1) * (edgePoint) + new Vector3(0, 0.1f, 0);
+            levelButtons[1].GetComponent<RectTransform>().localPosition =
+                new Vector3(1, 0, 1) * (edgePoint) + new Vector3(0, 0.1f, 0);
+            levelButtons[2].GetComponent<RectTransform>().localPosition =
+                new Vector3(1, 0, -1) * (edgePoint) + new Vector3(0, 0.1f, 0);
+            levelButtons[3].GetComponent<RectTransform>().localPosition =
+                new Vector3(-1, 0, -1) * (edgePoint) + new Vector3(0, 0.1f, 0);
+
+            endFrame.transform.localScale = endFrame.transform.localScale / 12f * Mathf.Sqrt(puzzleCount);
+            top.GetComponent<RectTransform>().localPosition =  new Vector3(0, 0, 1) * (edgePoint + 0.05f);
+        }
     }
 }

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Main/Scenes/StartScene.unity
     guid: 6df46f0764375984ca516df7914f8f4d
   - enabled: 1
+    path: Assets/Main/Scenes/LoadingScene.unity
+    guid: ccc66176576a3cb48a0498f5713f73b5
+  - enabled: 1
     path: Assets/Main/Scenes/LoginScene.unity
     guid: 730cf57ff366df84eb0e7cc49659dc9d
   - enabled: 1
