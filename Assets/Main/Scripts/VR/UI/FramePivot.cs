@@ -11,6 +11,7 @@ namespace Main.Scripts.VR.UI
         [SerializeField] private GameObject endFrame;
         [SerializeField] private GameObject connectionDisplay;
         [SerializeField] private GameObject top;
+        [SerializeField] private GameObject cup;
 
         private LevelView _levelView;
 
@@ -91,6 +92,11 @@ namespace Main.Scripts.VR.UI
 
             endFrame.transform.localScale = Vector3.one / 12f * Mathf.Sqrt(puzzleCount);
             top.GetComponent<RectTransform>().localPosition =  new Vector3(0, 0, 1) * (edgePoint + 0.05f);
+        }
+
+        public void Won()
+        {
+            cup.SetActive(true);
         }
     }
 }

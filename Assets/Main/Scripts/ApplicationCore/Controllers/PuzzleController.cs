@@ -35,6 +35,8 @@ namespace Main.Scripts.ApplicationCore.Controllers
         private const float FrameSize = 0.2f;
         private const float CheckingTime = 1f;
 
+        public bool isWon;
+
         public void Init(int imageNum)
         {
             _currentImageNum = imageNum;
@@ -114,7 +116,7 @@ namespace Main.Scripts.ApplicationCore.Controllers
 
             StopAllCoroutines();
             StartCoroutine(CheckPuzzle());
-            //StartCoroutine(CheckFinish());
+            StartCoroutine(CheckFinish());
         }
 
 
@@ -174,7 +176,7 @@ namespace Main.Scripts.ApplicationCore.Controllers
 
         private IEnumerator CheckFinish()
         {
-            yield return new WaitForSeconds(12f);
+            yield return new WaitForSeconds(5f);
 
             foreach (var puzzlePiece in _puzzlePieces)
             {
@@ -210,8 +212,21 @@ namespace Main.Scripts.ApplicationCore.Controllers
         private IEnumerator StartNextPuzzle()
         {
             yield return new WaitForSeconds(8f);
-            ClientBase.Instance.GetController<LevelController>().StartNextPuzzle();
-            Init(_currentImageNum);
+            if (!isWon)
+            {
+                ClientBase.Instance.GetController<LevelController>().StartNextPuzzle();
+                Init(_currentImageNum);
+            }
+            else
+            {
+                var framePivot = FindObjectOfType<FramePivot>();
+
+                if (framePivot != null)
+                {
+                    framePivot.Won();
+                }
+            }
+            
             FindObjectOfType<Watch>().CloseWatch();
         }
 

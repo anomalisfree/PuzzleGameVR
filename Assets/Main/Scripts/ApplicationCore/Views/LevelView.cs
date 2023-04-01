@@ -29,7 +29,7 @@ namespace Main.Scripts.ApplicationCore.Views
             realtimeView.RequestOwnership();
             levelData.SetImageNum(levelData.GetImageNum() + 1);
 
-            if (levelData.GetImageNum() < images.Count)
+            if (levelData.GetImageNum() < images.Count - 1)
             {
                 SetImage(levelData.GetImageNum());
             }
@@ -72,6 +72,8 @@ namespace Main.Scripts.ApplicationCore.Views
         private void WinTheGame()
         {
             Debug.Log("You win a game!");
+            ClientBase.Instance.GetController<PuzzleController>().isWon = true;
+            levelData.SetImageNum(0);
         }
     }
 }
