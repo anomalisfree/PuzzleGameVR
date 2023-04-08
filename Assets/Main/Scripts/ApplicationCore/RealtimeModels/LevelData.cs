@@ -28,5 +28,25 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels
         {
             return model.imageNum;
         }
+
+        public void SetPuzzleDone(bool value)
+        {
+            model.puzzleDone = value;
+        }
+        
+        public bool GetPuzzleDone()
+        {
+            return  model.puzzleDone;
+        }
+
+        public void SetWinGame(bool value)
+        {
+            model.winGame = value;
+        }
+
+        public bool GetWinGame()
+        {
+            return model.winGame;
+        }
     }
 }

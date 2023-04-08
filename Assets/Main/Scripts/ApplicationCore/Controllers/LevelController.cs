@@ -34,5 +34,25 @@ namespace Main.Scripts.ApplicationCore.Controllers
         {
             _levelView.SetNextImage();
         }
+
+        public void PuzzleDone()
+        {
+            _levelView.SetPuzzleDone(true);
+        }
+
+        public bool GetPuzzleDone()
+        {
+            return _levelView.GetPuzzleDone();
+        }
+        
+        public void PuzzleNew()
+        {
+            _levelView.SetPuzzleDone(false);
+        }
+
+        public bool GetWinGame()
+        {
+            return _levelView.GetWinGame();
+        }
     }
 }

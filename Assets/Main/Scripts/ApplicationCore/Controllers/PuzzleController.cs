@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,9 @@ using Main.Scripts.ApplicationCore.RealtimeModels;
 using Main.Scripts.VR.Other;
 using Main.Scripts.VR.UI;
 using Normal.Realtime;
+using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Main.Scripts.ApplicationCore.Controllers
 {
@@ -21,8 +24,8 @@ namespace Main.Scripts.ApplicationCore.Controllers
         [SerializeField] private List<PuzzlePieceData> puzzlePiece10x10;
         [SerializeField] private List<PuzzlePieceData> puzzlePiece11x11;
         [SerializeField] private List<PuzzlePieceData> puzzlePiece12x12;
-        
-        
+
+
         private List<PuzzlePieceData> _puzzlePiecePrefabs;
         [SerializeField] private GameObject framePrefab;
 
@@ -35,31 +38,44 @@ namespace Main.Scripts.ApplicationCore.Controllers
         private const float FrameSize = 0.2f;
         private const float CheckingTime = 1f;
 
-        public bool isWon;
+        //public bool isWon;
+
+        public Action isWon;
 
         public void Init(int imageNum)
         {
+            isWon += IsWon;
+
+            if (ClientBase.Instance.GetController<LevelController>().GetWinGame()) return;
+
             _currentImageNum = imageNum;
 
             _puzzlePiecePrefabs = _currentImageNum switch
             {
                 0 => puzzlePiece4x4,
                 1 => puzzlePiece4x4,
-                2 => puzzlePiece5x5,
+                2 => puzzlePiece4x4,
                 3 => puzzlePiece5x5,
-                4 => puzzlePiece6x6,
-                5 => puzzlePiece6x6,
-                6 => puzzlePiece7x7,
-                7 => puzzlePiece7x7,
-                8 => puzzlePiece8x8,
-                9 => puzzlePiece8x8,
-                10 => puzzlePiece9x9,
-                11 => puzzlePiece9x9,
-                12 => puzzlePiece10x10,
-                13 => puzzlePiece10x10,
-                14 => puzzlePiece11x11,
-                15 => puzzlePiece11x11,
-                16 => puzzlePiece12x12,
+                4 => puzzlePiece5x5,
+                5 => puzzlePiece5x5,
+                6 => puzzlePiece6x6,
+                7 => puzzlePiece6x6,
+                8 => puzzlePiece6x6,
+                9 => puzzlePiece7x7,
+                10 => puzzlePiece7x7,
+                11 => puzzlePiece7x7,
+                12 => puzzlePiece8x8,
+                13 => puzzlePiece8x8,
+                14 => puzzlePiece8x8,
+                15 => puzzlePiece9x9,
+                16 => puzzlePiece9x9,
+                17 => puzzlePiece9x9,
+                18 => puzzlePiece10x10,
+                19 => puzzlePiece10x10,
+                20 => puzzlePiece10x10,
+                21 => puzzlePiece11x11,
+                22 => puzzlePiece11x11,
+                23 => puzzlePiece11x11,
                 _ => puzzlePiece12x12
             };
 
@@ -116,7 +132,20 @@ namespace Main.Scripts.ApplicationCore.Controllers
 
             StopAllCoroutines();
             StartCoroutine(CheckPuzzle());
-            StartCoroutine(CheckFinish());
+            //StartCoroutine(CheckFinish());
+        }
+
+        private void IsWon()
+        {
+            isWon -= IsWon;
+            
+            var framePivot = FindObjectOfType<FramePivot>();
+
+            if (framePivot != null)
+            {
+                framePivot.Won();
+            }
+
         }
 
 
@@ -169,14 +198,21 @@ namespace Main.Scripts.ApplicationCore.Controllers
 
                 if (correctPuzzles == _puzzlePieces.Count && _puzzlePieces.Count > 0)
                 {
+                    ClientBase.Instance.GetController<LevelController>().PuzzleDone();
+                    //PuzzleDone();
+                }
+
+                if (ClientBase.Instance.GetController<LevelController>().GetPuzzleDone())
+                {
                     PuzzleDone();
+                    yield return new WaitForSeconds(25f);
                 }
             }
         }
 
         private IEnumerator CheckFinish()
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(20f);
 
             foreach (var puzzlePiece in _puzzlePieces)
             {
@@ -212,27 +248,24 @@ namespace Main.Scripts.ApplicationCore.Controllers
         private IEnumerator StartNextPuzzle()
         {
             yield return new WaitForSeconds(8f);
-            if (!isWon)
-            {
-                ClientBase.Instance.GetController<LevelController>().StartNextPuzzle();
-                Init(_currentImageNum);
-            }
-            else
-            {
-                var framePivot = FindObjectOfType<FramePivot>();
 
-                if (framePivot != null)
-                {
-                    framePivot.Won();
-                }
-            }
-            
+            ClientBase.Instance.GetController<LevelController>().PuzzleNew();
+
+            ClientBase.Instance.GetController<LevelController>().StartNextPuzzle();
+            Init(_currentImageNum);
+
             FindObjectOfType<Watch>().CloseWatch();
         }
 
         public void SetCurrentImageNum(int imageNum)
         {
             _currentImageNum = imageNum;
+            Init(_currentImageNum);
+        }
+
+        public int GetCurrentImageNum()
+        {
+            return _currentImageNum;
         }
     }
 }

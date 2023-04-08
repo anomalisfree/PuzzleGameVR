@@ -8,6 +8,8 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels
     {
         [RealtimeProperty(1, true )] private int _imageNum;
         [RealtimeProperty(2, true )] private float _frameHeight;
+        [RealtimeProperty(3, true )] private bool _puzzleDone;
+        [RealtimeProperty(4, true )] private bool _winGame;
     }
 }
 
@@ -36,9 +38,33 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels {
             }
         }
         
+        public bool puzzleDone {
+            get {
+                return _puzzleDoneProperty.value;
+            }
+            set {
+                if (_puzzleDoneProperty.value == value) return;
+                _puzzleDoneProperty.value = value;
+                InvalidateReliableLength();
+            }
+        }
+        
+        public bool winGame {
+            get {
+                return _winGameProperty.value;
+            }
+            set {
+                if (_winGameProperty.value == value) return;
+                _winGameProperty.value = value;
+                InvalidateReliableLength();
+            }
+        }
+        
         public enum PropertyID : uint {
             ImageNum = 1,
             FrameHeight = 2,
+            PuzzleDone = 3,
+            WinGame = 4,
         }
         
         #region Properties
@@ -47,22 +73,32 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels {
         
         private ReliableProperty<float> _frameHeightProperty;
         
+        private ReliableProperty<bool> _puzzleDoneProperty;
+        
+        private ReliableProperty<bool> _winGameProperty;
+        
         #endregion
         
         public LevelDataModel() : base(null) {
             _imageNumProperty = new ReliableProperty<int>(1, _imageNum);
             _frameHeightProperty = new ReliableProperty<float>(2, _frameHeight);
+            _puzzleDoneProperty = new ReliableProperty<bool>(3, _puzzleDone);
+            _winGameProperty = new ReliableProperty<bool>(4, _winGame);
         }
         
         protected override void OnParentReplaced(RealtimeModel previousParent, RealtimeModel currentParent) {
             _imageNumProperty.UnsubscribeCallback();
             _frameHeightProperty.UnsubscribeCallback();
+            _puzzleDoneProperty.UnsubscribeCallback();
+            _winGameProperty.UnsubscribeCallback();
         }
         
         protected override int WriteLength(StreamContext context) {
             var length = 0;
             length += _imageNumProperty.WriteLength(context);
             length += _frameHeightProperty.WriteLength(context);
+            length += _puzzleDoneProperty.WriteLength(context);
+            length += _winGameProperty.WriteLength(context);
             return length;
         }
         
@@ -70,6 +106,8 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels {
             var writes = false;
             writes |= _imageNumProperty.Write(stream, context);
             writes |= _frameHeightProperty.Write(stream, context);
+            writes |= _puzzleDoneProperty.Write(stream, context);
+            writes |= _winGameProperty.Write(stream, context);
             if (writes) InvalidateContextLength(context);
         }
         
@@ -84,6 +122,14 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels {
                     }
                     case (uint) PropertyID.FrameHeight: {
                         changed = _frameHeightProperty.Read(stream, context);
+                        break;
+                    }
+                    case (uint) PropertyID.PuzzleDone: {
+                        changed = _puzzleDoneProperty.Read(stream, context);
+                        break;
+                    }
+                    case (uint) PropertyID.WinGame: {
+                        changed = _winGameProperty.Read(stream, context);
                         break;
                     }
                     default: {
@@ -101,6 +147,8 @@ namespace Main.Scripts.ApplicationCore.RealtimeModels {
         private void UpdateBackingFields() {
             _imageNum = imageNum;
             _frameHeight = frameHeight;
+            _puzzleDone = puzzleDone;
+            _winGame = winGame;
         }
         
     }

@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using Main.Scripts.ApplicationCore.Clients;
 using Main.Scripts.ApplicationCore.Controllers;
@@ -24,25 +26,61 @@ namespace Main.Scripts.ApplicationCore.Views
             ClientBase.Instance.GetController<PuzzleController>().Init(levelData.GetImageNum());
         }
 
+        private void Start()
+        {
+            StartCoroutine(CheckImage());
+            StartCoroutine(CheckWinGame());
+        }
+
         public void SetNextImage()
         {
             realtimeView.RequestOwnership();
             levelData.SetImageNum(levelData.GetImageNum() + 1);
 
-            if (levelData.GetImageNum() < images.Count - 1)
+            if (levelData.GetImageNum() >= images.Count)
             {
-                SetImage(levelData.GetImageNum());
+                SetWinGame(true);
+                realtimeView.RequestOwnership();
+                levelData.SetImageNum(0);
             }
-            else
+        }
+        
+        private IEnumerator CheckWinGame()
+        {
+            while (true)
             {
-                WinTheGame();
+                yield return new WaitForSeconds(1f);
+                if (GetWinGame())
+                {
+                    WinTheGame();
+                    yield return new WaitForSeconds(30f);
+                    SetWinGame(false);
+                }
+            }
+        }
+        
+        private IEnumerator CheckImage()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(1f);
+                Debug.Log(ClientBase.Instance.GetController<PuzzleController>().GetCurrentImageNum() + " : " + levelData.GetImageNum());
+                if (ClientBase.Instance.GetController<PuzzleController>().GetCurrentImageNum()!= levelData.GetImageNum())
+                {
+                    SetImage(levelData.GetImageNum());
+                }
             }
         }
 
         public void SetImage(int num)
         {
-            imageMaterial.mainTexture = images[num];
-            ClientBase.Instance.GetController<PuzzleController>().SetCurrentImageNum(num);
+            Debug.Log("SetImage " + num);
+
+            if (num < images.Count)
+            {
+                imageMaterial.mainTexture = images[num];
+                ClientBase.Instance.GetController<PuzzleController>().SetCurrentImageNum(num);
+            }
         }
 
         public Sprite GetImagePreview()
@@ -72,8 +110,29 @@ namespace Main.Scripts.ApplicationCore.Views
         private void WinTheGame()
         {
             Debug.Log("You win a game!");
-            ClientBase.Instance.GetController<PuzzleController>().isWon = true;
-            levelData.SetImageNum(0);
+            ClientBase.Instance.GetController<PuzzleController>().isWon?.Invoke();
+        }
+
+        public void SetPuzzleDone(bool value)
+        {
+            realtimeView.RequestOwnership();
+            levelData.SetPuzzleDone(value);
+        }
+
+        public bool GetPuzzleDone()
+        {
+            return levelData.GetPuzzleDone();
+        }
+
+        public void SetWinGame(bool value)
+        {
+            realtimeView.RequestOwnership();
+            levelData.SetWinGame(value);
+        }
+
+        public bool GetWinGame()
+        {
+           return levelData.GetWinGame();
         }
     }
 }
